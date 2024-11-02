@@ -42,4 +42,4 @@ print(df.isnull().sum())
 print(df.head())
 
 # Save the cleaned and normalized dataset to a new CSV file (step 4)
-df.to_csv("processed_data\WHR2023_cleaned.csv", index=False)
+df.to_csv("processed_data/WHR2023_cleaned.csv", index=False)
