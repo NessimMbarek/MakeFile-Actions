@@ -1,6 +1,6 @@
 import io
 import sys
-
+import os
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
@@ -30,6 +30,9 @@ with open("processed_data/summary.txt", "w") as outfile:
     f"\n## Data Summary\n\n{summary}\n\n## Data Info\n\n{info}\n\n## Dataframe\n\n{data_head}"
 
 print("Data summary saved in processed_data folder!")
+
+if 'figures' not in os.listdir():
+    os.mkdir('figures')
 
 # Distribution of Happiness Score (step 3)
 plt.figure(figsize=(10, 6))
